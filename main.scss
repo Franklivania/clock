@@ -1,0 +1,106 @@
+*,
+*::before,
+*::after{
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+body {
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .clock {
+    position: relative;
+    width: 20em;
+    height: 20em;
+    border-radius: 50%;
+    border: 0.2em solid #000;
+    background-color: #fff;
+  }
+  
+  .numbers {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-family: "Old English Text MT", serif;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+  }
+  
+  .number {
+    font-size: 2.5em;
+  }
+  
+  .number:nth-child(1),
+  .number:nth-child(2),
+  .number:nth-child(3),
+  .number:nth-child(4) {
+    position: absolute;
+    transform-origin: 50% 100%;
+  }
+  
+  .number:nth-child(1) {
+    top: 0%;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  
+  .number:nth-child(2) {
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+  
+  .number:nth-child(3) {
+    bottom: 0   ;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  
+  .number:nth-child(4) {
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+  
+  .hand {
+    position: absolute;
+    background-color: #000;
+    transform-origin: bottom center;
+  }
+  
+  .hour-hand {
+    width: 0.2em;
+    height: 6em;
+    left: calc(50% - 0.2em);
+    bottom: 50%;
+    transform: translateY(-50%);
+  }
+  
+  .minute-hand {
+    width: 0.2em;
+    height: 8em;
+    left: calc(50% - 0.15em);
+    bottom: 50%;
+    transform: translateY(-50%);
+  }
+  
+  .second-hand {
+    width: 0.1em;
+    height: 7em;
+    left: calc(50% - 0.05em);
+    bottom: 50%;
+    transform: translateY(-50%);
+    background-color: red;
+    transition: all 0.5s ease;
+  }
+  
